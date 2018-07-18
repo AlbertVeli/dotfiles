@@ -1,0 +1,66 @@
+! Behold the sting of the X king
+Xft.dpi:        96
+Xft.antialias:  true
+Xft.rgba:       rgb
+Xft.hinting:    true
+Xft.hintstyle:  hintslight
+Xft.autohint:   false
+Xft.lcdfilter:  lcddefault
+
+!-*- Perl extensions -*-
+URxvt.perl-ext-common: default,resize-font,selection-to-clipboard,pasta,matcher,keyboard-select
+URxvt.keysym.M-u:      perl:url-select:select_next
+URxvt.url-launcher:    /usr/bin/google-chrome-stable
+URxvt.underlineURLs:   true
+URxvt.matcher.button:  1 
+URxvt.keysym.M-Escape: perl:keyboard-select:activate
+URxvt.keysym.M-s:      perl:keyboard-select:search
+URxvt.keysym.Control-Shift-V: perl:pasta:paste
+URxvt.clipboard.autocopy: true
+
+URxvt.geometry:         100x45
+URxvt.borderLess:       false
+URxvt.transparent:      false
+URxvt.depth:            32
+URxvt.background:       rgba:0000/0000/0000/cccc
+URxvt.foreground:       white
+
+URxvt.saveLines:        10000
+URxvt.xftAntialias:     true
+URxvt.font:             xft:inconsolata:pixelsize=18, xft:dejavu sans mono:pixelsize=18
+URxvt.boldFont:         xft:inconsolata:pixelsize=18, xft:dejavu sans mono:pixelsize=18
+URxvt.italicFont:       xft:inconsolata:pixelsize=18, xft:dejavu sans mono:pixelsize=18
+URxvt.bolditalicFont:   xft:inconsolata:pixelsize=18, xft:dejavu sans mono:pixelsize=18
+URxvt.iconFile:         /usr/share/icons/Tango/scalable/apps/utilities-terminal.svg
+
+URxvt.internalBorder:   0
+URxvt.underlineColor:	#999999
+URxvt.cursorBlink:      true
+URxvt.cursorColor:      #850A0C
+URxvt.cursorColor2:     #000000
+
+URxvt.scrollBar:        false
+URxvt.scrollBar_right:  false
+URxvt.scrollTtyOutput:  false
+URxvt.scrollWithBuffer: true
+URxvt.scrollTtyKeypress: true
+URxvt.urgentOnBell: true
+
+! Disable picture insert mode
+! Enter unicode with C-s <hex number>
+URxvt.iso14755: true
+URxvt.iso14755_52: false
+
+Emacs.font:     inconsolata-18
+Emacs.geometry: 90x60
+
+#include ".config/xcolors/derp"
+!#include ".config/xcolors/tango"
+!#include ".config/xcolors/zenburn"
+!#include ".config/xcolors/dwmrob"
+!#include ".config/xcolors/gnometerm"
+!#include ".config/xcolors/digerati"
+!#include ".config/xcolors/jasonwryan"
+!#include ".config/xcolors/phrak1"
+!#include ".config/xcolors/rezza"
+!#include ".config/xcolors/rydgel"
