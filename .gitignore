@@ -35,6 +35,7 @@
 !README.md
 !UNLICENSE
 !misc/
+!misc/make.conf
 !misc/xorg.conf.d/
 !misc/xorg.conf.d/45-keyboard.conf
 !misc/kernel/
