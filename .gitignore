@@ -34,5 +34,8 @@
 !.vimrc
 !README.md
 !UNLICENSE
-!xorg.conf.d/
-!xorg.conf.d/45-keyboard.conf
+!misc/
+!misc/xorg.conf.d/
+!misc/xorg.conf.d/45-keyboard.conf
+!misc/kernel/
+!misc/kernel/config-4.14.52-hp-zbook
