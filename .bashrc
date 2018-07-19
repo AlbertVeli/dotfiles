@@ -41,11 +41,11 @@ if [ -f $HOME/bash-insulter/src/bash.command-not-found ]; then
 	source $HOME/bash-insulter/src/bash.command-not-found
 fi
 
-# fzf goodness, like menu Ctrl-r
+# fzf goodness, like menu Ctrl-r (history) and Alt-c (cd dir)
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
 # Add some things to PATH
 export PATH=$PATH:$HOME/bin
 
 # Make gnome-online-accounts think gnome is running
-export XDG_CURRENT_DESKTOP=gnome
+export XDG_CURRENT_DESKTOP=GNOME
