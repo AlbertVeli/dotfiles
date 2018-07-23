@@ -7,3 +7,6 @@
 [submodule ".vim/bundle/Vundle.vim"]
 	path = .vim/bundle/Vundle.vim
 	url = https://github.com/VundleVim/Vundle.vim.git
+[submodule "source/other_sources/pwfiles/dict/SecLists"]
+	path = source/other_sources/pwfiles/dict/SecLists
+	url = https://github.com/danielmiessler/SecLists.git
