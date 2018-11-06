@@ -37,15 +37,29 @@ export TFTPDIR=albert@dunkelstern.westermo.com:/tftpboot/
 export DOWNLOADS=$HOME/Westermo/downloads/
 
 # bash insulter!
-if [ -f $HOME/bash-insulter/src/bash.command-not-found ]; then
-	source $HOME/bash-insulter/src/bash.command-not-found
-fi
+#if [ -f $HOME/bash-insulter/src/bash.command-not-found ]; then
+#	source $HOME/bash-insulter/src/bash.command-not-found
+#fi
 
 # fzf goodness, like menu Ctrl-r (history) and Alt-c (cd dir)
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+#[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+if [ -f $HOME/.bash_aliases ]; then
+	source $HOME/.bash_aliases
+fi
 
 # Add some things to PATH
 export PATH=$PATH:$HOME/bin
+export PATH=$PATH:$HOME/.local/bin
+
+#export PATH=$PATH:$HOME/.gem/ruby/2.3.0/bin
 
 # Make gnome-online-accounts think gnome is running
 export XDG_CURRENT_DESKTOP=GNOME
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+if [ -d $HOME/.rvm ]; then
+	export PATH="$PATH:$HOME/.rvm/bin"
+	source "$HOME/.rvm/scripts/rvm"
+fi
+
