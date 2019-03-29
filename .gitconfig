@@ -3,3 +3,7 @@
 	name = Albert Veli
 [github]
 	user = AlbertVeli
+[alias]
+	nicelog = log --pretty=format:'%Cred%h%Creset -%Creset %s %Cgreen(%cr) %C(bold blue)<%aE>%Creset [%G?]'
+	m = merge -S --no-ff --edit
+	c = commit -S --edit

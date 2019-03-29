@@ -48,11 +48,16 @@ if [ -f $HOME/.bash_aliases ]; then
 	source $HOME/.bash_aliases
 fi
 
+# Avoid having C-s freeze the terminal
+stty -ixon
+
 # Add some things to PATH
 export PATH=$PATH:$HOME/bin
 export PATH=$PATH:$HOME/.local/bin
-
-#export PATH=$PATH:$HOME/.gem/ruby/2.3.0/bin
+# go
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOPATH/bin
+export SCIPY_PIL_IMAGE_VIEWER=display
 
 # Make gnome-online-accounts think gnome is running
 export XDG_CURRENT_DESKTOP=GNOME

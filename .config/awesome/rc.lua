@@ -49,7 +49,7 @@ local function run_once(cmd_arr)
     end
 end
 
-run_once({ "urxvtd", "unclutter -root", "xscreensaver -no-splash", "xautolock -time 15 -locker 'xscreensaver-command --lock'" })
+run_once({ "urxvtd", "unclutter -root", "xscreensaver -no-splash", "xautolock -time 40 -locker 'xscreensaver-command --lock'" })
 
 
 -- {{{ Variable definitions
