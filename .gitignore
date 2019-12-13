@@ -1,6 +1,7 @@
 *
 !.gitignore
 !.gitconfig
+!.git-prompt.sh
 !.Xresources
 !.xinitrc
 !.urxvt/

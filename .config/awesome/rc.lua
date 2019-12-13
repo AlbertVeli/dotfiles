@@ -50,6 +50,7 @@ local function run_once(cmd_arr)
 end
 
 run_once({ "urxvtd", "unclutter -root", "xscreensaver -no-splash", "xautolock -time 40 -locker 'xscreensaver-command --lock'" })
+awful.util.spawn_with_shell("xcompmgr &")
 
 
 -- {{{ Variable definitions

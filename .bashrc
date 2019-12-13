@@ -62,6 +62,12 @@ export SCIPY_PIL_IMAGE_VIEWER=display
 # Make gnome-online-accounts think gnome is running
 export XDG_CURRENT_DESKTOP=GNOME
 
+# bash git prompt
+source ~/.git-prompt.sh
+PS1='[\[\033]0;\u@\h:\w\007\]\[\033[01;32m\[\u@\h\[\033[01;34m\] \W $(__git_ps1 " (%s)")\[\033[00m\]]\$ '
+export GIT_PS1_SHOWDIRTYSTATE=yes
+
+# Uncomment this if running metasploit
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 if [ -d $HOME/.rvm ]; then
 	export PATH="$PATH:$HOME/.rvm/bin"

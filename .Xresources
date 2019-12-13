@@ -27,10 +27,10 @@ URxvt.foreground:       white
 
 URxvt.saveLines:        10000
 URxvt.xftAntialias:     true
-URxvt.font:             xft:inconsolata:pixelsize=18, xft:dejavu sans mono:pixelsize=18
-URxvt.boldFont:         xft:inconsolata:pixelsize=18, xft:dejavu sans mono:pixelsize=18
-URxvt.italicFont:       xft:inconsolata:pixelsize=18, xft:dejavu sans mono:pixelsize=18
-URxvt.bolditalicFont:   xft:inconsolata:pixelsize=18, xft:dejavu sans mono:pixelsize=18
+URxvt.font:             xft:inconsolata:pixelsize=21, xft:dejavu sans mono:pixelsize=21
+URxvt.boldFont:         xft:inconsolata:pixelsize=21, xft:dejavu sans mono:pixelsize=21
+URxvt.italicFont:       xft:inconsolata:pixelsize=21, xft:dejavu sans mono:pixelsize=21
+URxvt.bolditalicFont:   xft:inconsolata:pixelsize=21, xft:dejavu sans mono:pixelsize=21
 URxvt.iconFile:         /usr/share/icons/Tango/scalable/apps/utilities-terminal.svg
 
 URxvt.internalBorder:   0
@@ -51,7 +51,7 @@ URxvt.urgentOnBell: true
 URxvt.iso14755: true
 URxvt.iso14755_52: false
 
-Emacs.font:     inconsolata-18
+Emacs.font:     inconsolata-21
 Emacs.geometry: 90x60
 
 #include ".config/xcolors/derp"
