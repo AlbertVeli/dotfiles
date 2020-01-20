@@ -48,6 +48,7 @@
 !.bash_profile
 !.bashrc
 !.bash_aliases
+!gentoo_cheatsheet.txt
 !source
 !source/other_sources
 !source/other_sources/pwfiles

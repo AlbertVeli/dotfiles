@@ -1,0 +1,56 @@
+# --- Network interfaces
+
+rc-update del net.enp0s31f6 default
+rc-update add net.wlp2s0 default
+
+
+# --- USE flags and updates
+
+# Global USE flags
+/etc/portage/make.conf
+
+# Package special
+/etc/portage/package.use/
+
+# After use flag change
+emerge -uDN @world
+emerge --depclean
+
+# Recompile everything
+emerge -eav --usepkg=n @system
+emerge -eav --usepkg=n @world
+
+
+# --- Kernel
+
+mount /boot
+make -j8 && make modules_install && make install
+change /usr/src/linux link
+genkernel --install initramfs
+grub-mkconfig -o /boot/grub/grub.cfg
+emerge -av nvidia-drivers virtualbox-modules
+
+
+# --- Queries
+
+# Find what package installed a file
+equery belongs /usr/bin/dig
+
+# List files installed by package
+equery files gnome-online-accounts
+
+# List all packages with a specific use flag
+eix --use cpu_flags_x86_sse2
+
+# List installed packages with a specific use flag
+eix --installed-with-use alsa
+
+# Mount vmdk
+sudo modprobe nbd
+sudo qemu-nbd -r -c /dev/nbd1 image.vmdk
+sudo mount /dev/nbd1p1 mnt/
+
+# Add custom ebuild(s)
+vi /etc/portage/repos.conf/local.conf
+# Build new manifest
+repoman manifest
