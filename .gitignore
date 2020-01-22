@@ -2,6 +2,10 @@
 !.gitignore
 !.gitconfig
 !.git-prompt.sh
+!.bash_profile
+!.bashrc
+!.bash_aliases
+!bin/route_to_duts.sh
 !.Xresources
 !.xinitrc
 !.urxvt/
@@ -45,9 +49,6 @@
 !misc/xorg.conf.d/45-keyboard.conf
 !misc/kernel/
 !misc/kernel/config-4.14.52-hp-zbook
-!.bash_profile
-!.bashrc
-!.bash_aliases
 !gentoo_cheatsheet.txt
 !source
 !source/other_sources
