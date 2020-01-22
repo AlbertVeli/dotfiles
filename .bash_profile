@@ -7,3 +7,12 @@ if [[ -f ~/.bashrc ]] ; then
 fi
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+
+# Only on OSX
+if test "`uname -s`" = "Darwin"; then
+    export CLICOLOR=1
+    export LSCOLORS=GxFxCxDxBxegedabagaced
+
+    # Bash completions
+    [[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
+fi
