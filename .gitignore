@@ -1,11 +1,11 @@
 *
 !.gitignore
 !.gitconfig
-!.git-prompt.sh
 !.bash_profile
 !.bashrc
 !.bash_aliases
 !bin/route_to_duts.sh
+!bin/copyrow.sh
 !.Xresources
 !.xinitrc
 !.urxvt/
