@@ -1,9 +1,25 @@
 [user]
 	email = albert.veli@gmail.com
 	name = Albert Veli
+	signingkey = albert.veli@gmail.com
 [github]
 	user = AlbertVeli
+	signingkey = albert.veli@gmail.com
 [alias]
 	nicelog = log --pretty=format:'%Cred%h%Creset -%Creset %s %Cgreen(%cr) %C(bold blue)<%aE>%Creset [%G?]'
 	m = merge -S --no-ff --edit
 	c = commit -S --edit
+[commit]
+	gpgsign = true
+[fetch]
+	prune = true
+[gui]
+	pruneduringfetch = true
+[smartgit "submodule"]
+	fetchalways = true
+	update = true
+	initializenew = true
+[push]
+	recurseSubmodules = check
+[gpg]
+	program = gpg
