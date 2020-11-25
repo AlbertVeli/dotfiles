@@ -63,7 +63,7 @@ export SCIPY_PIL_IMAGE_VIEWER=display
 export XDG_CURRENT_DESKTOP=GNOME
 
 # bash git prompt
-#source ~/.git-prompt.sh
+#source /usr/share/git/git-prompt.sh
 #PS1='[\[\033]0;\u@\h:\w\007\]\[\033[01;32m\[\u@\h\[\033[01;34m\] \W$(__git_ps1 " (%s)")\[\033[00m\]]\$ '
 #export GIT_PS1_SHOWDIRTYSTATE=yes
 
@@ -72,12 +72,19 @@ export XDG_CURRENT_DESKTOP=GNOME
 #export PATH="$WASMTIME_HOME/bin:$PATH"
 
 # Rust binaries
-export PATH=/home/albert/.cargo/bin:$PATH
+#export PATH=/home/albert/.cargo/bin:$PATH
+
+export GPG_TTY=$(tty)
+
+# System ruby gems
+PATH="$PATH:$(ruby -e 'puts Gem.user_dir')/bin"
 
 # Uncomment this if running metasploit
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-#if [ -d $HOME/.rvm ]; then
-#	export PATH="$PATH:$HOME/.rvm/bin"
-#	source "$HOME/.rvm/scripts/rvm"
-#fi
-
+if [ -d $HOME/.rvm ]; then
+	export PATH="$PATH:$HOME/.rvm/bin"
+	source "$HOME/.rvm/scripts/rvm"
+fi
+export PGHOST=/tmp
+export GITHUB_USERNAME=albertveli
+export GITHUB_EMAIL=albert.veli@gmail.com
