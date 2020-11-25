@@ -18,10 +18,7 @@
 !.emacs.d/my-functions.el
 !.emacs.d/my-packages.el
 !.config/
-!.config/awesome/
 !.config/awesome/rc.lua
-!.config/awesome/awesome-wm-widgets
-!.config/awesome/volume-control
 !.config/xcolors/
 !.config/xcolors/derp
 !.config/xcolors/digerati
