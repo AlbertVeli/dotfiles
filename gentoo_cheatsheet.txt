@@ -25,7 +25,7 @@ emerge -eav --usepkg=n @world
 
 mount /boot
 make -j8 && make modules_install && make install
-change /usr/src/linux link
+change /usr/src/linux link (eselect kernel list)
 genkernel --install initramfs
 grub-mkconfig -o /boot/grub/grub.cfg
 emerge -av nvidia-drivers virtualbox-modules
