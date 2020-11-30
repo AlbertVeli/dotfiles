@@ -67,6 +67,9 @@ export XDG_CURRENT_DESKTOP=GNOME
 #PS1='[\[\033]0;\u@\h:\w\007\]\[\033[01;32m\[\u@\h\[\033[01;34m\] \W$(__git_ps1 " (%s)")\[\033[00m\]]\$ '
 #export GIT_PS1_SHOWDIRTYSTATE=yes
 
+PS1='\[\033]0;\u@\h:\w\007\]\[\033[01;32m\]\u@\h\[\033[01;34m\] \w \$\[\033[00m\] '
+export PS1
+
 # Wasmtime wasm debugging
 #export WASMTIME_HOME="$HOME/.wasmtime"
 #export PATH="$WASMTIME_HOME/bin:$PATH"
