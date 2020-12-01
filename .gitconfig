@@ -21,5 +21,7 @@
 	initializenew = true
 [push]
 	recurseSubmodules = check
+[pull]
+	rebase = false
 [gpg]
 	program = gpg
