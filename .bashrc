@@ -80,13 +80,16 @@ export PS1
 export GPG_TTY=$(tty)
 
 # pip3 --user directory
-export PATH="$PATH:$(python3 -m site --user-base)/bin"
 
 if [[ "$OSTYPE" == "darwin"* ]]; then
 	# macOS specific settings
+	# Move this out of this if block when more
+	# than one thing is here
+	export PATH="$PATH:$(python3 -m site --user-base)/bin"
 else
 	# Linux specific settings
 	alias ip='ip -c'
+	export PATH="$PATH:$(python3 -m site --user-base)/bin"
 fi
 
 # System ruby gems
