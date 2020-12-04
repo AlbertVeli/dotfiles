@@ -86,6 +86,7 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
 	# macOS specific settings
 else
 	# Linux specific settings
+	alias ip='ip -c'
 fi
 
 # System ruby gems
