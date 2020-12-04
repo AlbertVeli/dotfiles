@@ -53,11 +53,11 @@ stty -ixon
 
 # Add some things to PATH
 export PATH=$PATH:$HOME/bin
-export PATH=$PATH:$HOME/.local/bin
 # go
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
 export SCIPY_PIL_IMAGE_VIEWER=display
+export EDITOR=vim
 
 # Make gnome-online-accounts think gnome is running
 export XDG_CURRENT_DESKTOP=GNOME
@@ -78,6 +78,15 @@ export PS1
 #export PATH=/home/albert/.cargo/bin:$PATH
 
 export GPG_TTY=$(tty)
+
+# pip3 --user directory
+export PATH="$PATH:$(python3 -m site --user-base)/bin"
+
+if [[ "$OSTYPE" == "darwin"* ]]; then
+	# macOS specific settings
+else
+	# Linux specific settings
+fi
 
 # System ruby gems
 PATH="$PATH:$(ruby -e 'puts Gem.user_dir')/bin"
