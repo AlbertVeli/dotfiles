@@ -82,10 +82,7 @@ export GPG_TTY=$(tty)
 # pip3 --user directory
 export PATH="$PATH:$(python3 -m site --user-base)/bin"
 
-if [[ "$OSTYPE" == "darwin"* ]]; then
-	# macOS specific settings
-	archey
-else
+if [[ "$OSTYPE" != "darwin"* ]]; then
 	# Linux specific settings
 	alias ip='ip -c'
 fi
