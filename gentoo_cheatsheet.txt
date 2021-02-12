@@ -1,10 +1,16 @@
+# Official cheetsheet:
+https://wiki.gentoo.org/wiki/Gentoo_Cheat_Sheet
+
+
+# --- My stuff ---
+
+
 # --- Network interfaces
 
 rc-update del net.enp0s31f6 default
 rc-update add net.wlp2s0 default
 
-
-# --- USE flags and updates
+# --- USE flags and updates ---
 
 # Global USE flags
 /etc/portage/make.conf
@@ -12,8 +18,10 @@ rc-update add net.wlp2s0 default
 # Package special
 /etc/portage/package.use/
 
-# After use flag change
-emerge -uDN @world
+# Sync and update
+eix-sync
+layman -S
+emerge -uDN --with-bdeps=y @world
 emerge --depclean
 
 # Recompile everything
@@ -21,7 +29,7 @@ emerge -eav --usepkg=n @system
 emerge -eav --usepkg=n @world
 
 
-# --- Kernel
+# --- Kernel ---
 
 mount /boot
 make -j8 && make modules_install && make install
@@ -31,7 +39,7 @@ grub-mkconfig -o /boot/grub/grub.cfg
 emerge -av nvidia-drivers virtualbox-modules
 
 
-# --- Queries
+# --- Queries ---
 
 # Find what package installed a file
 equery belongs /usr/bin/dig
@@ -54,3 +62,8 @@ sudo mount /dev/nbd1p1 mnt/
 vi /etc/portage/repos.conf/local.conf
 # Build new manifest
 repoman manifest
+
+# Custom patches
+mkdir -p /etc/portage/patches/x11-terms/xfce4-terminal
+copy .patch files into created directory; cd /var/db/repos/gentoo/x11-terms/xfce4-terminal
+ebuild xfce4-terminal-0.8.10.ebuild clean prepare
