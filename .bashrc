@@ -99,3 +99,5 @@ fi
 export PGHOST=/tmp
 export GITHUB_USERNAME=albertveli
 export GITHUB_EMAIL=albert.veli@gmail.com
+
+export LC_CTYPE=en_US.UTF-8

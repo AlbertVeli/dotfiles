@@ -1,4 +1,4 @@
-# Official cheetsheet:
+# Official cheatsheet:
 https://wiki.gentoo.org/wiki/Gentoo_Cheat_Sheet
 
 
@@ -32,6 +32,7 @@ emerge -eav --usepkg=n @world
 # --- Kernel ---
 
 mount /boot
+cp ../linux/.config . && make oldconfig
 make -j8 && make modules_install && make install
 change /usr/src/linux link (eselect kernel list)
 genkernel --install initramfs
