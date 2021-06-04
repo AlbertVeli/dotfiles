@@ -104,7 +104,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(column-number-mode t)
- '(package-selected-packages (quote (try)))
+ '(package-selected-packages '(try))
  '(show-paren-mode t))
 (put 'dired-find-alternate-file 'disabled nil)
 

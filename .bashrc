@@ -33,7 +33,7 @@ HISTFILESIZE=100000
 shopt -s checkwinsize
 
 # For building
-export TFTPDIR=albert@dunkelstern.westermo.com:/tftpboot/
+export TFTPDIR=albert@dunkelstern.westermo.com:/tftpboot
 export DOWNLOADS=$HOME/Westermo/downloads/
 
 # bash insulter!

@@ -54,10 +54,8 @@ eix --use cpu_flags_x86_sse2
 # List installed packages with a specific use flag
 eix --installed-with-use alsa
 
-# Mount vmdk
-sudo modprobe nbd
-sudo qemu-nbd -r -c /dev/nbd1 image.vmdk
-sudo mount /dev/nbd1p1 mnt/
+# List packages installed last 2 hours
+genlop -l --date -2:0:0
 
 # Add custom ebuild(s)
 vi /etc/portage/repos.conf/local.conf
@@ -68,3 +66,25 @@ repoman manifest
 mkdir -p /etc/portage/patches/x11-terms/xfce4-terminal
 copy .patch files into created directory; cd /var/db/repos/gentoo/x11-terms/xfce4-terminal
 ebuild xfce4-terminal-0.8.10.ebuild clean prepare
+
+# Misc tips not specific to gentoo
+
+# Dockerfile
+edit Dockerfile; docker build -t mymachine .
+docker run -it -v /home/albert/mydir:/mydir -p 2222:2222 mymachine
+
+# Example Dockerfile for python CTF challenge
+FROM python
+RUN pip3 --no-cache-dir install flask gunicorn
+WORKDIR /srv
+COPY chall.py chall.jpg ./
+ENV FLAG="myctf{this_is_flag}"
+EXPOSE 2222
+USER nobody
+CMD python chall.py
+
+# Mount vmdk
+sudo modprobe nbd
+sudo qemu-nbd -r -c /dev/nbd1 image.vmdk
+sudo mount /dev/nbd1p1 mnt/
+
