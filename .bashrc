@@ -27,13 +27,14 @@ shopt -s histappend
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
 HISTSIZE=50000
 HISTFILESIZE=100000
+HISTTIMEFORMAT='%Y/%m/%d %T -> '
 
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
 shopt -s checkwinsize
 
 # For building
-export TFTPDIR=albert@dunkelstern.westermo.com:/tftpboot
+export TFTPDIR=albert@wrdc140.westermo.com:/tftpboot
 export DOWNLOADS=$HOME/Westermo/downloads/
 
 # bash insulter!
@@ -92,12 +93,27 @@ PATH="$PATH:$(ruby -e 'puts Gem.user_dir')/bin"
 
 # Uncomment this if running metasploit
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-if [ -d $HOME/.rvm ]; then
-	export PATH="$PATH:$HOME/.rvm/bin"
-	source "$HOME/.rvm/scripts/rvm"
-fi
+#if [ -d $HOME/.rvm ]; then
+#	export PATH="$PATH:$HOME/.rvm/bin"
+#	source "$HOME/.rvm/scripts/rvm"
+#fi
 export PGHOST=/tmp
 export GITHUB_USERNAME=albertveli
 export GITHUB_EMAIL=albert.veli@gmail.com
 
 export LC_CTYPE=en_US.UTF-8
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+#__conda_setup="$('/home/albert/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+#if [ $? -eq 0 ]; then
+#    eval "$__conda_setup"
+#else
+#    if [ -f "/home/albert/anaconda3/etc/profile.d/conda.sh" ]; then
+#        . "/home/albert/anaconda3/etc/profile.d/conda.sh"
+#    else
+#        export PATH="/home/albert/anaconda3/bin:$PATH"
+#    fi
+#fi
+#unset __conda_setup
+# <<< conda initialize <<<
