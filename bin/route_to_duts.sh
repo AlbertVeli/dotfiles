@@ -1,6 +1,6 @@
 #!/bin/sh
 
-dunkelip=`host dunkelstern.westermo.com | cut -d' ' -f4`
+dunkelip=`host wrdc140.westermo.com | cut -d' ' -f4`
 
 # Need sudo
 if test "`uname -s`" = "Darwin"; then
