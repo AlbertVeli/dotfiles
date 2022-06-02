@@ -15,4 +15,11 @@
 
 (bind-key "C-c d" 'cleanup-buffer-whitespace)
 
+(defun reverse-characters (beg end)
+ "Reverse characters between BEG and END."
+ (interactive "r")
+ (let ((region (buffer-substring beg end)))
+   (delete-region beg end)
+   (insert (nreverse region))))
+
 ;;; my-functions.el ends here

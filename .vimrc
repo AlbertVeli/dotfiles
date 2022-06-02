@@ -7,6 +7,8 @@ set background=dark
 
 autocmd BufNewFile,BufReadPost *.cs set syntax=html
 
+set nofixendofline
+
 syntax on
 filetype indent plugin on
 " allow modeline to set indentation
@@ -15,15 +17,20 @@ set modeline
 " Enable all vim-python features
 let g:python_highlight_all = 1
 
-" Indent 3 spaces
-" filetype plugin indent on
-" show existing tab with 3 spaces width
-set tabstop=8
-" when indenting with '>', use 3 spaces width
-"set shiftwidth=3
-" On pressing tab, insert 3 spaces
-"" set expandtab
-"set noexpandtab
+" tabstop:     Width of tab character
+" softtabstop: Fine tunes the amount of white space to be added
+" shiftwidth:  Amount of whitespace to add in normal mode
+" expandtab:   https://www.youtube.com/watch?v=SsoOG6ZeyUI
+" set tabstop     =3
+" set softtabstop =3
+" set shiftwidth  =3
+"set expandtab
+
+" Kernel
+set tabstop     =8
+set softtabstop =8
+set shiftwidth  =8
+set noexpandtab
 
 " More indent
 set autoindent
