@@ -24,10 +24,6 @@ HISTTIMEFORMAT='%Y/%m/%d %T -> '
 export TFTPDIR=albert@wrdc140.westermo.com:/tftpboot
 export DOWNLOADS=$HOME/Westermo/downloads/
 
-# For building
-export TFTPDIR=albert@wrdc140.westermo.com:/tftpboot
-export DOWNLOADS=$HOME/Westermo/downloads/
-
 # bash insulter!
 #if [ -f $HOME/bash-insulter/src/bash.command-not-found ]; then
 #	source $HOME/bash-insulter/src/bash.command-not-found
