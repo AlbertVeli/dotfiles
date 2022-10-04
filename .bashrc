@@ -21,7 +21,8 @@ HISTFILESIZE=100000
 HISTTIMEFORMAT='%Y/%m/%d %T -> '
 
 # For building
-export TFTPDIR=albert@wrdc140.westermo.com:/tftpboot
+#export TFTPDIR=albert@wrdc140.westermo.com:/tftpboot
+export TFTPDIR=/srv/tftp
 export DOWNLOADS=$HOME/Westermo/downloads/
 
 # bash insulter!
@@ -109,7 +110,12 @@ fi
 # The following block is surrounded by two delimiters.
 # These delimiters must not be modified. Thanks.
 # START KALI CONFIG VARIABLES
-PROMPT_ALTERNATIVE=twoline
+run_conda=0
+if [ $run_conda -ne 0 ]; then
+  PROMPT_ALTERNATIVE=oneline
+else
+  PROMPT_ALTERNATIVE=twoline
+fi
 NEWLINE_BEFORE_PROMPT=yes
 # STOP KALI CONFIG VARIABLES
 
@@ -198,4 +204,23 @@ if ! shopt -oq posix; then
   elif [ -f /etc/bash_completion ]; then
     . /etc/bash_completion
   fi
+fi
+
+if [ $run_conda -ne 0 ]; then
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/albert/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/albert/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/albert/anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/albert/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+else
+  echo "Not running conda setup, edit .bashrc to run it"
+# <<< conda initialize <<<
 fi
