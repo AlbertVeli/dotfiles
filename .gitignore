@@ -18,7 +18,8 @@
 !.emacs.d/my-functions.el
 !.emacs.d/my-packages.el
 !.config/
-!.config/awesome/rc.lua
+!.config/pudb
+!.config/pudb/pudb.cfg
 !.config/xcolors/
 !.config/xcolors/derp
 !.config/xcolors/digerati
