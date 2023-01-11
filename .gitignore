@@ -4,8 +4,11 @@
 !.bash_profile
 !.bashrc
 !.bash_aliases
+!bin
 !bin/route_to_duts.sh
 !bin/copyrow.sh
+!bin/move_brave.sh
+!bin/record_1080p.sh
 !.Xresources
 !.xinitrc
 !.urxvt/

@@ -220,7 +220,7 @@ else
     fi
 fi
 unset __conda_setup
-else
-  echo "Not running conda setup, edit .bashrc to run it"
 # <<< conda initialize <<<
+#else
+#  echo "Not running conda setup, edit .bashrc to run it"
 fi
