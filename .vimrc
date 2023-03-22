@@ -1,6 +1,3 @@
-" Load plugins
-so ~/.vim/plugins.vim
-
 " Set colorscheme (See /usr/share/vim/vim80/colors)
 colorscheme desert
 set background=dark
@@ -8,6 +5,9 @@ set background=dark
 autocmd BufNewFile,BufReadPost *.cs set syntax=html
 
 set nofixendofline
+
+" Disable .vim/.netrwhist
+let g:netrw_dirhistmax = 0
 
 syntax on
 filetype indent plugin on

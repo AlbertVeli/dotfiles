@@ -25,3 +25,6 @@
 	rebase = false
 [gpg]
 	program = gpg
+# Overwrite some lines in case of workdir
+[includeIf "gitdir:~/Westermo/"]
+	path = ~/.gitconfig-work
