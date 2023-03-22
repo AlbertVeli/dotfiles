@@ -1,5 +1,6 @@
 " Set colorscheme (See /usr/share/vim/vim80/colors)
-colorscheme desert
+" https://github.com/morhetz/gruvbox
+colorscheme gruvbox
 set background=dark
 
 autocmd BufNewFile,BufReadPost *.cs set syntax=html
