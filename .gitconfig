@@ -9,6 +9,7 @@
 	nicelog = log --pretty=format:'%Cred%h%Creset -%Creset %s %Cgreen(%cr) %C(bold blue)<%aE>%Creset [%G?]'
 	m = merge -S --no-ff --edit
 	c = commit -S --edit
+	search = log --all --grep
 [commit]
 	gpgsign = true
 [fetch]
@@ -25,6 +26,8 @@
 	rebase = false
 [gpg]
 	program = gpg
+[log]
+	date = iso
 # Overwrite some lines in case of workdir
 [includeIf "gitdir:~/Westermo/"]
 	path = ~/.gitconfig-work
