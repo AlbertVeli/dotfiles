@@ -10,6 +10,8 @@
 	m = merge -S --no-ff --edit
 	c = commit -S --edit
 	search = log --all --grep
+	last = log -1 HEAD --stat
+	searchcommit = !git rev-list --all | xargs git grep -F
 [commit]
 	gpgsign = true
 [fetch]

@@ -1,0 +1,31 @@
+# List installed packages
+apt list --installed
+
+# Upgrade (as sudo)
+apt update
+apt -y full-upgrade -y
+# Auto reboot if needed after upgrade
+[ -f /var/run/reboot-required ] && reboot -f
+
+# Install downloaded package
+apt install ./<package>.deb
+
+# Remove package
+apt remove --purge <package>
+
+# Remove unneeded automatically installed packages
+apt autoremove
+
+# Build custom package
+# edit debian/control and debian/rules
+# If custom patch, drop it in debian/patches and update series
+# Use quilt to automatically create patch and update series
+# See https://wiki.debian.org/UsingQuilt
+dpkg-buildpackage -us -uc
+
+# Find what package a file belongs to
+dpkg -S bin/ping
+
+# Dockerfile
+docker build -t gaga2 .
+docker run --rm -it -p 8000:8000 --privileged -t gaga2 /bin/sh
