@@ -13,7 +13,8 @@
 	last = log -1 HEAD --stat
 	searchcommit = !git rev-list --all | xargs git grep -F
 [commit]
-	gpgsign = true
+	#gpgsign = true
+	gpgsign = false
 [fetch]
 	prune = true
 [gui]
