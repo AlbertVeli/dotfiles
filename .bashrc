@@ -137,4 +137,6 @@ fi
 
 # Intel OneAPI, uncomment this if you get
 # error while loading shared libraries: libsvml.so
-source /opt/intel/oneapi/setvars.sh
+#source /opt/intel/oneapi/setvars.sh
+
+source /etc/profile.d/bash_completion.sh
