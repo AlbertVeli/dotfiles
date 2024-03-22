@@ -139,4 +139,8 @@ fi
 # error while loading shared libraries: libsvml.so
 #source /opt/intel/oneapi/setvars.sh
 
-source /etc/profile.d/bash_completion.sh
+if [ -f /etc/profile.d/bash_completion.sh ]; then
+	source /etc/profile.d/bash_completion.sh
+elif [ -f /etc/profile.d/bash_completion.sh ]; then
+	source /usr/local/etc/profile.d/bash_completion.sh
+fi
