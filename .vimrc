@@ -40,3 +40,11 @@ set cindent
 
 " custom objdump highlighting
 autocmd BufNewFile,BufRead *.objdump set filetype=objdump
+
+" Remember last cursor position when reopening files
+if has("autocmd")
+  autocmd BufReadPost *
+    \ if line("'\"") > 0 && line("'\"") <= line("$") |
+    \   exe "normal! g`\"" |
+    \ endif
+endif

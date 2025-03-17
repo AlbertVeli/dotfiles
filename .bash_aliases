@@ -6,6 +6,7 @@
 #export PS1="[ruby-\$(~/.rvm/bin/rvm-prompt v p g)]\$(git-current-branch)\n$PS1"
 
 alias cdr='cd $(git rev-parse --show-toplevel)'
+alias difft='difftastic'
 
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
@@ -28,4 +29,6 @@ alias l='ls -CF'
 #   sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
-alias pbcopy='xclip -selection c'
+if [[ $(uname) != "Darwin" ]]; then
+    alias pbcopy='xclip -selection c'
+fi
