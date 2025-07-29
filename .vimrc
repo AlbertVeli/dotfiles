@@ -21,7 +21,7 @@ let g:python_highlight_all = 1
 " tabstop:     Width of tab character
 " softtabstop: Fine tunes the amount of white space to be added
 " shiftwidth:  Amount of whitespace to add in normal mode
-" expandtab:   https://www.youtube.com/watch?v=SsoOG6ZeyUI
+" expandtab:   https://www.youtube.com/watch?v=V7PLxL8jIl8
 " set tabstop     =3
 " set softtabstop =3
 " set shiftwidth  =3
