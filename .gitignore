@@ -6,6 +6,7 @@
 !.bash_aliases
 !bin
 !bin/route_to_duts.sh
+!bin/convert_fcp_video_audio_to_better_audio_bitrate.sh
 !bin/copyrow.sh
 !bin/move_brave.sh
 !bin/record_1080p.sh
