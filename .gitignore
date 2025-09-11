@@ -54,3 +54,16 @@
 !source/other_sources/pwfiles
 !source/other_sources/pwfiles/dict
 !source/other_sources/pwfiles/dict/SecLists
+!.config
+!.config/nvim
+!.config/nvim/init.lua
+!.config/nvim/lua
+!.config/nvim/lua/keymaps.lua
+!.config/nvim/lua/autocmds.lua
+!.config/nvim/lua/opts.lua
+!.config/nvim/lua/plugins
+!.config/nvim/lua/plugins/lint.lua
+!.config/nvim/lua/plugins/git.lua
+!.config/nvim/lua/plugins/init.lua
+!.config/nvim/lua/plugins/treesitter.lua
+!.config/nvim/lua/plugins/ui.lua

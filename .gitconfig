@@ -7,6 +7,8 @@
 	#signingkey = albert.veli@gmail.com
 	user = teobas
 	signingkey = albert.veli@westermo.com
+[difftool "difftastic"]
+	cmd = difftastic "$LOCAL" "$REMOTE"
 [alias]
 	nicelog = log --pretty=format:'%Cred%h%Creset -%Creset %s %Cgreen(%cr) %C(bold blue)<%aE>%Creset [%G?]'
 	m = merge -S --no-ff --edit
@@ -15,6 +17,9 @@
 	last = log -1 HEAD --stat
 	searchcommit = !git rev-list --all | xargs git grep -F
 	oldest-ancestor = !bash -c 'diff -u <(git rev-list --first-parent "${1:-master}") <(git rev-list --first-parent "${2:-HEAD}") | sed -ne \"s/^ //p\" | head -1' -
+	# Difftastic aliases, so `git dlog` is `git log` with difftastic
+	dlog = log --ext-diff
+	dshow = show --ext-diff
 [commit]
 	#gpgsign = true
 	gpgsign = false
@@ -28,6 +33,7 @@
 	initializenew = true
 [push]
 	recurseSubmodules = check
+	autoSetupRemote = true
 [pull]
 	rebase = false
 [gpg]
@@ -37,3 +43,5 @@
 # Overwrite some lines in case of workdir
 [includeIf "gitdir:~/Westermo/"]
 	path = ~/.gitconfig-work
+[init]
+	defaultBranch = main
