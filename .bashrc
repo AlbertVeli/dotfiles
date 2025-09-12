@@ -22,7 +22,8 @@ HISTTIMEFORMAT='%Y/%m/%d %T -> '
 
 # For building
 #export TFTPDIR=albert@wrdc140.westermo.com:/tftpboot
-export TFTPDIR=/srv/tftp
+#export TFTPDIR=/srv/tftp
+export TFTPDIR=/home/albve/Westermo/fawlty/src
 export DOWNLOADS=$HOME/Westermo/downloads/
 
 # bash insulter!
@@ -67,6 +68,8 @@ export PATH="$PATH:$(python3 -m site --user-base)/bin"
 
 export GITHUB_USERNAME=albertveli
 export GITHUB_EMAIL=albert.veli@gmail.com
+
+#export GIT_EXTERNAL_DIFF=difftastic
 
 export LC_CTYPE=en_US.UTF-8
 
@@ -144,3 +147,4 @@ if [ -f /etc/profile.d/bash_completion.sh ]; then
 elif [ -f /etc/profile.d/bash_completion.sh ]; then
 	source /usr/local/etc/profile.d/bash_completion.sh
 fi
+. "$HOME/.cargo/env"

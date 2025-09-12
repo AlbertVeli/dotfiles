@@ -18,3 +18,4 @@ if test "`uname -s`" = "Darwin"; then
 
     archey -l retro
 fi
+. "$HOME/.cargo/env"

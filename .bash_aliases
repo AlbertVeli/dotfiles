@@ -32,3 +32,4 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 if [[ $(uname) != "Darwin" ]]; then
     alias pbcopy='xclip -selection c'
 fi
+alias bat='batcat'
