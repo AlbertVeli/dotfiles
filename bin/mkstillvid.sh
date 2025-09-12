@@ -27,21 +27,20 @@ OUT=""
 RES=720
 FPS=25
 CRF=28
-
-# Collect extra args for ffmpeg
-EXTRA_ARGS=""
+AUD_BPS=256k
+AUD_AR=48000
 
 # --- Argument parsing ---
 while [ $# -gt 0 ]; do
   case "$1" in
-    -i) IMG=$2; shift 2 ;;         # input image
-    -a) AUD=$2; shift 2 ;;         # input audio
-    -o) OUT=$2; shift 2 ;;         # output filename
-    -r) RES=$2; shift 2 ;;         # resolution preset (720 or 1080)
-    -framerate) FPS=$2; shift 2 ;; # framerate
-    -crf) CRF=$2; shift 2 ;;       # video quality (lower = higher quality)
+    -i) IMG=$2; shift 2 ;;
+    -a) AUD=$2; shift 2 ;;
+    -o) OUT=$2; shift 2 ;;
+    -r) RES=$2; shift 2 ;;
+    -framerate) FPS=$2; shift 2 ;;
+    -crf) CRF=$2; shift 2 ;;
     -h|--help) usage; exit 0 ;;
-    *) EXTRA_ARGS="$EXTRA_ARGS $1"; shift ;; # pass everything else to ffmpeg
+    *) EXTRA_ARGS="$EXTRA_ARGS $1"; shift ;;
   esac
 done
 
@@ -80,23 +79,22 @@ esac
 echo "Creating video:"
 echo "  Image : $IMG"
 echo "  Audio : $AUD"
-echo "  Out   : $OUT (${WIDTH}x${HEIGHT}, ${FPS}fps, CRF ${CRF})"
-if [ -n "$EXTRA_ARGS" ]; then
-  echo "  Extra ffmpeg args:$EXTRA_ARGS"
-fi
+echo "  Out   : $OUT (${WIDTH}x${HEIGHT}, ${FPS}fps, CRF ${CRF}, Audio ${AUD_BPS} ${AUD_AR})"
 
 # ffmpeg filter: scale down to fit, then pad with black to exact target size
 VF="scale=${WIDTH}:${HEIGHT}:force_original_aspect_ratio=decrease,pad=${WIDTH}:${HEIGHT}:(ow-iw)/2:(oh-ih)/2"
 
 # --- Run ffmpeg ---
-ffmpeg \
-  -loop 1 -framerate "$FPS" -i "$IMG" -i "$AUD" \
+cmd="ffmpeg \
+  -loop 1 -framerate \"$FPS\" -i \"$IMG\" -i \"$AUD\" \
   -c:v libx264 -tune stillimage -pix_fmt yuv420p \
-  -vf "$VF" \
-  -profile:v baseline -level 3.0 -preset veryfast -crf "$CRF" \
+  -vf \"$VF\" \
+  -profile:v baseline -level 3.0 -preset veryfast -crf \"$CRF\" \
   -c:a aac \
+  -b:a \"$AUD_BPS\" -ar \"$AUD_AR\" \
   -shortest -movflags +faststart \
-  "$EXTRA_ARGS" \
-  "$OUT"
+  \"$OUT\""
+
+eval $cmd
 
 echo "Done: $OUT"
