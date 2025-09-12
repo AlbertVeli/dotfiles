@@ -52,4 +52,10 @@ end
 vim.keymap.set('n', '<leader>jo', prev_jump_same_buf, { desc = 'Prev jump (same buffer)' })
 vim.keymap.set('n', '<leader>ji', next_jump_same_buf, { desc = 'Next jump (same buffer)' })
 
+-- Toggle background
+vim.keymap.set('n','<leader>bg', function()
+  vim.o.background = (vim.o.background == 'dark') and 'light' or 'dark'
+  vim.cmd.colorscheme('gruvbox')
+end, { desc = 'Toggle background' })
+
 -- vim: set ts=2 sts=2 sw=2 et:

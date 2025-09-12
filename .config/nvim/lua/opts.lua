@@ -1,4 +1,5 @@
-vim.opt.background = 'dark'
+vim.o.background = 'dark' -- dark or light, toggle with <leader>bg
+vim.g.gruvbox_contrast_light = 'soft'
 pcall(vim.cmd.colorscheme, 'gruvbox')
 
 -- Don't persist buffer list
