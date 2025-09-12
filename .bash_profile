@@ -16,6 +16,6 @@ if test "`uname -s`" = "Darwin"; then
     # Bash completions
     [[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
 
-    archey -l retro
+    #archey -l retro
 fi
 . "$HOME/.cargo/env"
