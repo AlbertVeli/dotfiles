@@ -3,10 +3,10 @@
 	name = Albert Veli
 	signingkey = albert.veli@gmail.com
 [github]
-	#user = AlbertVeli
-	#signingkey = albert.veli@gmail.com
-	user = teobas
-	signingkey = albert.veli@westermo.com
+	user = AlbertVeli
+	signingkey = albert.veli@gmail.com
+	#user = teobas
+	#signingkey = albert.veli@westermo.com
 [difftool "difftastic"]
 	cmd = difftastic "$LOCAL" "$REMOTE"
 [alias]
