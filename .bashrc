@@ -150,3 +150,6 @@ elif [ -f /etc/profile.d/bash_completion.sh ]; then
 	source /usr/local/etc/profile.d/bash_completion.sh
 fi
 . "$HOME/.cargo/env"
+
+# Oh My Posh
+eval "$(oh-my-posh init bash)"
