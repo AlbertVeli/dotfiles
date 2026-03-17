@@ -6,10 +6,6 @@ map('n','<leader>tg', tb.live_grep,  { desc='Telescope grep' })
 map('n','<leader>tb', tb.buffers,    { desc='Telescope buffers' })
 map('n','<leader>th', tb.help_tags,  { desc='Telescope help' })
 
--- Copilot
-map('n','<leader>gc', ':Copilot panel<CR>', { silent=true, desc='Copilot panel' })
-map('i','<C-J>', 'copilot#Accept("<CR>")', { expr=true, silent=true })
-
 -- Oil
 map('n','-', '<CMD>Oil<CR>', { desc='Open parent directory' })
 

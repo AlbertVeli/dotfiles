@@ -1,6 +1,7 @@
 return {
   { 'morhetz/gruvbox' },
   { import = 'plugins.ui' },
+  { import = 'plugins.copilot' },
   { import = 'plugins.git' },
   { import = 'plugins.treesitter' },
   { import = 'plugins.lint' },

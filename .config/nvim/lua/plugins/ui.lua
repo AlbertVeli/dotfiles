@@ -7,9 +7,6 @@ return {
     config = function() pcall(require('telescope').load_extension, 'fzf') end,
   },
 
-  -- Copilot
-  { 'github/copilot.vim' },
-
   -- Icons
   {
     'echasnovski/mini.icons',

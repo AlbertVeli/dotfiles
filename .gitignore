@@ -57,6 +57,7 @@
 !source/other_sources/pwfiles/dict/SecLists
 !.config
 !.config/nvim
+!.config/nvim/CHEATSHEET.md
 !.config/nvim/init.lua
 !.config/nvim/lua
 !.config/nvim/lua/keymaps.lua
