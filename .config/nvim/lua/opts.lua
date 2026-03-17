@@ -7,6 +7,9 @@ vim.opt.shada:remove('%')
 -- Clear jump list on startup
 vim.api.nvim_create_autocmd('VimEnter', { command = 'clearjumps' })
 
+-- yank to system clipboard
+vim.opt.clipboard = "unnamedplus"
+
 vim.opt.termguicolors = true
 vim.opt.signcolumn = 'yes'
 vim.opt.fixendofline = false
