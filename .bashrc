@@ -21,15 +21,14 @@ HISTFILESIZE=100000
 HISTTIMEFORMAT='%Y/%m/%d %T -> '
 
 # For building
-#export TFTPDIR=albert@wrdc140.westermo.com:/tftpboot
-#export TFTPDIR=/srv/tftp
-export TFTPDIR=/home/albve/Westermo/fawlty/src
+#export TFTPDIR=user@remote.computer:/tftpboot
+export TFTPDIR=/tftpboot/
 export DOWNLOADS=$HOME/Westermo/downloads/
 
 # bash insulter!
-#if [ -f $HOME/bash-insulter/src/bash.command-not-found ]; then
-#      source $HOME/bash-insulter/src/bash.command-not-found
-#fi
+if [ -f $HOME/bash-insulter/src/bash.command-not-found ]; then
+      source $HOME/bash-insulter/src/bash.command-not-found
+fi
 
 # Avoid having C-s freeze the terminal
 stty -ixon
@@ -152,4 +151,10 @@ fi
 . "$HOME/.cargo/env"
 
 # Oh My Posh
-eval "$(oh-my-posh init bash)"
+#eval "$(oh-my-posh init bash)"
+
+#if [ -f /home/albve/bin/lscolors.sh ]; then
+#	source /home/albve/bin/lscolors.sh
+#fi
+
+#export PATH="$PATH:/home/albve/.foundry/bin"

@@ -29,3 +29,8 @@ dpkg -S bin/ping
 # Dockerfile
 docker build -t gaga2 .
 docker run --rm -it -p 8000:8000 --privileged -t gaga2 /bin/sh
+
+# SSH reverse shell
+autossh -M 0 -N -R 2222:localhost:22 <vps>
+# SSH SOCKS proxy
+autossh -M 0 -N -D 1080 <vps>
