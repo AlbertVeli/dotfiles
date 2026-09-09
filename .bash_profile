@@ -19,3 +19,7 @@ if test "`uname -s`" = "Darwin"; then
     #archey -l retro
 fi
 . "$HOME/.cargo/env"
+
+# >>> Codex installer >>>
+export PATH="/Users/albertveli/.local/bin:$PATH"
+# <<< Codex installer <<<
