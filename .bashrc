@@ -40,6 +40,7 @@ export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
 export SCIPY_PIL_IMAGE_VIEWER=display
 export EDITOR=vim
+export VISUAL=nvim
 
 # Rust
 # Rust binaries
@@ -90,7 +91,7 @@ fi
 
 # set a fancy prompt (non-color, unless we know we "want" color)
 case "$TERM" in
-    xterm-color|*-256color) color_prompt=yes;;
+    xterm-color|xterm-ghostty|*-256color) color_prompt=yes;;
 esac
 
 export COLORTERM=truecolor
@@ -148,7 +149,7 @@ if [ -f /etc/profile.d/bash_completion.sh ]; then
 elif [ -f /etc/profile.d/bash_completion.sh ]; then
 	source /usr/local/etc/profile.d/bash_completion.sh
 fi
-. "$HOME/.cargo/env"
+#. "$HOME/.cargo/env"
 
 # Oh My Posh
 #eval "$(oh-my-posh init bash)"

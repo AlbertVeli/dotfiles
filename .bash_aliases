@@ -33,3 +33,6 @@ if [[ $(uname) != "Darwin" ]]; then
     alias pbcopy='xclip -selection c'
 fi
 alias bat='batcat'
+
+alias vi='nvim'
+alias vim='nvim'
