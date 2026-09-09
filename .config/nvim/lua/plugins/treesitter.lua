@@ -1,11 +1,16 @@
 return {
-  { 'nvim-treesitter/nvim-treesitter', build = ':TSUpdate',
+  {
+    'nvim-treesitter/nvim-treesitter',
+    branch = 'master',
+    build = ':TSUpdate',
     opts = {
       ensure_installed = { 'c', 'cpp', 'lua', 'python', 'bash', 'json', 'yaml' },
       highlight = { enable = true },
-      indent    = { enable = true },
+      indent = { enable = true },
     },
-    config = function(_, opts) require('nvim-treesitter.configs').setup(opts) end,
+    config = function(_, opts)
+      require('nvim-treesitter.configs').setup(opts)
+    end,
   },
 }
 
